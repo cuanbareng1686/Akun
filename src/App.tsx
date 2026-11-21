@@ -28,6 +28,8 @@ import {
 import { WalletForm } from './components/WalletForm';
 import { AccountList } from './components/AccountList';
 import { ConfirmDriveModal } from './components/ConfirmDriveModal';
+import { PWAInstallButton } from './components/PWAInstallButton';
+import { OfflineIndicator } from './components/OfflineIndicator';
 
 interface DraftInput {
   provider: WalletProvider;
@@ -443,7 +445,13 @@ export default function App() {
             />
           )}
         </div>
+
+        <div className="mt-4 flex justify-center">
+          <PWAInstallButton />
+        </div>
       </main>
+
+      <OfflineIndicator />
 
       <ConfirmDriveModal
         mutation={pendingMutation}
